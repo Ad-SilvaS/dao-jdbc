@@ -16,8 +16,8 @@ public class Program2 {
 
         System.out.println("\n=== TEST 3: Department FindAll ===");
         List<Department> departments = departmentDao.findAll();
-        for (Department dep : departments) {
-            System.out.println(dep);
+        for (Department d : departments) {
+            System.out.println(d);
         }
     }
 }
