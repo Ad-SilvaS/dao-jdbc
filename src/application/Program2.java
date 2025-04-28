@@ -14,10 +14,15 @@ public class Program2 {
         Department department = departmentDao.findById(3);
         System.out.println(department);
 
-        System.out.println("\n=== TEST 3: Department FindAll ===");
+        System.out.println("\n=== TEST 2: Department FindAll ===");
         List<Department> departments = departmentDao.findAll();
         for (Department d : departments) {
             System.out.println(d);
         }
+
+        System.out.println("\n=== TEST 3: Department Insert ===");
+        Department newDep = new Department(null, "Transport");
+        departmentDao.insert(newDep);
+        System.out.println("Done!");
     }
 }
