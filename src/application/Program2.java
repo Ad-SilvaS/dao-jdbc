@@ -24,5 +24,9 @@ public class Program2 {
         Department newDep = new Department(null, "Transport");
         departmentDao.insert(newDep);
         System.out.println("Done!");
+
+        System.out.println("\n=== TEST 4: Department DELETE ===");
+        departmentDao.deleteById(5);
+        System.out.println("Done!");
     }
 }
