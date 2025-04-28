@@ -21,12 +21,18 @@ public class Program2 {
         }
 
         System.out.println("\n=== TEST 3: Department Insert ===");
-        Department newDep = new Department(null, "Transport");
+        Department newDep = new Department(null, "Security");
         departmentDao.insert(newDep);
         System.out.println("Done!");
 
         System.out.println("\n=== TEST 4: Department DELETE ===");
-        departmentDao.deleteById(5);
+        departmentDao.deleteById(11);
+        System.out.println("Done!");
+
+        System.out.println("\n=== TEST 5: Department UPDATE ===");
+        newDep = departmentDao.findById(9);
+        newDep.setName("Logistics");
+        departmentDao.update(newDep);
         System.out.println("Done!");
     }
 }
